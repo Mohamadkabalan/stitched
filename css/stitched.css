@@ -28,9 +28,11 @@ body{
     margin-left:0;margin-right:0;
 }
 .container-fluid{
-	max-width:1600px;
+    max-width:1600px;
 }
-
+a:hover{
+    text-decoration-skip-ink: none;
+}
 /*FIRST MENU CSS:
 ====================*/
 .first_menu{
@@ -111,7 +113,7 @@ body{
     color:black;
 }
 .active_language{
-    font-weight:bold;
+    font-family:nexa-bold;
 }
 .lang_separator{
     margin-left:5px;
@@ -193,7 +195,7 @@ ul.scnd_menu_list li a{
     font-size:17.8px;
     padding: 0;
     line-height: 47px;
-    font-weight:bold;
+    font-family:nexa-bold;
 }
 ul.scnd_menu_list li{
     padding-right:80px;
@@ -279,9 +281,9 @@ ul.scnd_menu_list{
     text-transform:uppercase;
     margin-bottom: 35px;
     display: block;
-    font-weight:bold;
     font-size: 25px;
     line-height: 25px;
+    font-family:nexa-bold;
 }
 .footer_container ul.footer_list li a:hover{
     color:#FFFFFF;
@@ -293,7 +295,7 @@ ul.scnd_menu_list{
     text-transform:uppercase;
     display: block;
     margin-bottom: 12px;
-    font-weight:bold;
+    font-family:nexa-bold;
     line-height: 25px;
 }
 .footer_container ul.social_links_list_container{
@@ -348,11 +350,13 @@ ul.scnd_menu_list{
         padding-top:20px;
     }
     .footer_container ul.footer_list li.title_footer_list a{
-        font-weight:bold;
+        font-family:nexa-bold;
         margin-top:20px;
     }
     .footer_container {
         padding-top: 10px;
+        padding-left:15px;
+        padding-right:15px;
     }
 }
 @media (max-width: 630px) {
@@ -520,6 +524,16 @@ ul.scnd_menu_list{
     .carousel-caption p{
         font-size: 10px;
     }
+    .glyphicon-chevron-left::before {
+        background : url(../images/left_carousel_slider_small.png) no-repeat;
+        width: 15px;
+        height: 17px;
+    }
+    .glyphicon-chevron-right::before {
+        background : url(../images/right_carousel_slider_small.png) no-repeat;
+        width: 15px;
+        height: 17px;
+    }
 
 }
 /*=========================*/
@@ -550,9 +564,9 @@ ul.scnd_menu_list{
     position:absolute;
     z-index:2;
     top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .imgs_container .close_but_imgs_first_container{
     width: 75px;
@@ -631,15 +645,15 @@ ul.scnd_menu_list{
     display: block;
 }
 .circle_black_meduim_container{
-	width: 84px;
-    height: 84px;
+    width: 65px;
+    height: 65px;
     position:absolute;
-	top: -42px;
-	right: 14%;
+    top: -33px;
+    right: 14%;
     z-index:1;
 }
 .circle_black_meduim_container:after{
-	background : url(../images/circle_black_meduim.png) no-repeat;
+    background : url(../images/circle_black_small.png) no-repeat;
     content : "";
     width: 84px;
     height: 84px;
@@ -668,20 +682,20 @@ ul.scnd_menu_list{
     line-height: 92px;
 }
 .marquee_container{
-	position:absolute;
-	bottom:20px;
-	left:0;
-	right:0;
+    position:absolute;
+    bottom:20px;
+    left:0;
+    right:0;
 }
 .marquee_container marquee {
-	height:44px;
-	line-height:44px;
-	background-color:#FFB706;
-	width:100%;
-	direction:left;
-	color:#08080A;
-	font-family:nexa-bold;
-	font-size:27px;
+    height:44px;
+    line-height:44px;
+    background-color:#FFB706;
+    width:100%;
+    direction:left;
+    color:#08080A;
+    font-family:nexa-bold;
+    font-size:27px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .imgs_container .close_but_imgs_first_container{
@@ -736,16 +750,6 @@ ul.scnd_menu_list{
         width: 75px !important;
         height: 73px !important;
     }
-	.circle_black_meduim_container{
-	width: 84px !important;
-    height: 84px !important;
-	top: -42px !important;
-}
-.circle_black_meduim_container:after{
-	background : url(../images/circle_black_meduim.png) no-repeat !important;
-    width: 84px !important;
-    height: 84px !important;
-}
     .img_container_absolute_description p{
         font-size:15px !important;
         line-height:15px !important;
@@ -808,16 +812,6 @@ ul.scnd_menu_list{
         width: 40px;
         height: 39px;
     }
-	.circle_black_meduim_container{
-	width: 65px ;
-    height: 65px ;
-	top: -33px ;
-}
-.circle_black_meduim_container:after{
-	background : url(../images/circle_black_small.png) no-repeat ;
-    width: 65px ;
-    height: 65px;
-}
     .img_container_absolute_description p{
         font-size:8px;
         line-height:8px;
@@ -848,6 +842,13 @@ ul.scnd_menu_list{
     }
     .imgs_container .scnd_black_rectangle_container{
         left: -27px;
+    }
+    .marquee_container {
+        position: relative;
+        bottom: 0px;
+    }
+    .marquee_container marquee {
+        margin-bottom: -1px;
     }
 }
 @media (max-width: 500px) {
