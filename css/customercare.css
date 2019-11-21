@@ -1,0 +1,8 @@
+.ccsections{border-bottom:1px solid #646464;width:100%;float:left;cursor:pointer;}
+.ccsections_links{float:left;padding-left:15px;color:#000000;font-size:20px;text-transform:uppercase;line-height:20px;margin-top:20px;margin-bottom:20px;}
+.black_down_arrow_cc{line-height:20px;margin-top:21px;margin-bottom:20px;padding-right:15px;float:right;}
+.less_cc{display:none;}
+.hidden_sections{display:none;}
+.comm_links_txt{padding-left:15px;color:#000000;font-size:20px;line-height:1;margin-top:20px;margin-bottom:20px;text-align: justify;}
+.butons_container_cc{width: 138px;height: 34px;margin: 0 auto;margin-bottom: 0px; margin-bottom: 30px;margin-top: 10px;}
+.butons_container_cc_but{padding-top: 0;line-height: 34px;min-width: 138px;height: 34px;color:#FFFFFF;font-size: 20px;font-weight:normal;background-color:#000000;text-transform: uppercase;border-radius: 10px;}

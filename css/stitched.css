@@ -2,9 +2,7 @@
 @font-face {
     font-family: 'Nexa';
     src: 
-        url('fonts/NexaLight.otf') format('opentype'),
-        url('fonts/NexaBold.otf') format('opentype'),
-        url('fonts/NexaLightItalic.otf')  format('opentype');
+        url('fonts/NexaLight.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,6 +10,11 @@
     font-family: 'Nexa-bold';
     src: 
         url('fonts/NexaBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Nexa-italic';
+    src: 
+        url('fonts/NexaLightItalic.otf') format('opentype');
 }
 @font-face {
     font-family: 'MyriadPro';
@@ -24,13 +27,13 @@ body{
 html, 
 body {
     overflow-x: hidden;
-	overflow: -moz-scrollbars-none;
-	width:100%;
-	-ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    width:100%;
+    -ms-overflow-style: none;
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-			position:relative;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
 }
 body::-webkit-scrollbar { width: 0 !important }
 .nopad{
@@ -109,7 +112,7 @@ a:hover{
     text-transform:capitalize;
 }
 .login_container ul.login_menu_list li a:hover{
-    text-decoration:underline;
+    text-decoration:none;
     color:black;
 }
 .login_container ul.login_menu_list li.orders_list_element img ,.login_container ul.login_menu_list li.carts_list_element img , .login_container ul.login_menu_list li.favorites_list_element img{
@@ -881,3 +884,264 @@ ul.scnd_menu_list{
 }
 
 /*=========================*/
+
+/*HOVERED MENU CSS:
+====================*/
+.scnd_menu_list li a.active ,.scnd_menu_list li a:hover,.scnd_menu_list li a:active ,.scnd_menu_list li a:focus{
+    color:#FFB706;
+    text-decoration:none;
+}
+.contentmenu{
+    display:none;
+}
+.mobilemenucontent{display:none;}
+.black_absolute_menu{position:absolute;left:0;right:0;top:0;bottom:0;min-height:400px;background-color:rgba(0,0,0,0.94);z-index: 9;display:none;}
+.menu_list_title{font-size:15.5px;font-family:nexa-bold;text-transform:uppercase;color:#FFB706;margin-top: 50px;margin-bottom: 20px;}
+.menu_list_ul li{list-style:none;}
+.menu_list_ul li a{color:#FFFFFF;font-size:15.5px;text-transform:uppercase;line-height: 2.3;}
+.about_pad{padding-left:30px;}
+.about_menu_list_text{color:#FFFFFF;font-size:16px;line-height:1.3;margin-top:30px;}
+.insidetabmobilelink{color:black !important;font-size: 16px !important;width: 100%;display: block;line-height: 1.5 !important;font-family: Nexa !important;}
+.insidetabmobilelink:hover{color:black !important;text-decoration:underline !important;}
+@media (min-width: 768px) {
+    .about_menu_list_text {
+        color:#FFFFFF !important;
+        margin-top:30px !important;
+    }
+}
+@media (max-width: 768px) {
+    .about_menu_list_text {
+        color:black;
+        margin-top: 0;
+    }
+}
+/*=========================*/
+
+/* CART SUB MENU CSS:
+====================*/
+li.carts_list_element:hover span i{color:#FFB706;}
+li.carts_list_element{height:25px;}
+#cart_absolute_container{position:absolute;width:auto;height:auto;top: 49px;right:20px;z-index:8;display:none;z-index:99;}
+.cart_relative_container{background-color:white;padding-top: 20px;}
+.cart_content_container{box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);padding:68px 17px 10px 23px;}
+.cart_close_but{position:absolute;top:0;right:0;color:black;font-size: 25px;line-height: 25px;cursor: pointer;padding-top:18px;padding-right:18px;}
+.item_in_cart_container{border-top:1px solid #605F5F;border-bottom:1px solid #605F5F;min-width:458px;min-height:144px;}
+.product_in_cart_img{width:80px;height:80px;}
+.item_in_cart_row{padding-top:20px;padding-bottom:20px;padding-left:7px;padding-right:15px;}
+.product_in_cart_title{font-size:17.2px;font-family:nexa-bold;margin-bottom:0;text-transform:uppercase;margin-top: 5px;}
+.product_in_cart_sub_titile{font-size:13.5px;margin-bottom:0;text-transform:uppercase;margin-bottom:0;}
+.input-group_container{max-width: 86px;float:left;padding-left:10px;}
+.input-group-btn > .btn.special_case{padding-left:0;padding-right:0;border:none;cursor:pointer;color:#BDBFC1;}
+.input-group-btn > .btn.special_case:hover ,.input-group-btn > .btn.special_case:focus {background-color:transparent;border-box:none;box-shadow:none;border:none;outline: none;}
+.input-group input.snippet_product{border:none;box-shadow: none;text-align:center;padding:6px 0;font-size:22px;color:#000000;font-family:nexa-bold;background-color:#F3F3F6;width: 34px;margin-right: 7px;margin-left: 7px;}
+.input-group input.snippet_product.font_normal{font-weight:normal;font-family:Nexa;font-size:15px;}
+.snd_cont_quant .input-group_container{padding-left:0;}
+.input-group .special_case span{color: #BDBFC1 !important;}
+.centered_input_groupe_container{margin-top: 36px;margin-left: 26px;}
+.product_in_cart_price{font-size:17.2px;font-family:nexa-bold;margin-bottom:0;text-transform:uppercase;float: right;line-height: 106px;}
+.item_in_cart_checkout_container{text-align:center;border-bottom:1px solid #605F5F;}
+.login_container ul.login_menu_list li a.cart_inside_but:hover{color: #FFFFFF;text-decoration: none;opacity: 0.6;}
+.login_container ul.login_menu_list li a.cart_inside_but{display: block;margin-right: 15px;margin-top: 0px;min-width: 90px;height: 32px;line-height: 32px;color: #FFFFFF;font-size: 12px;font-family: nexa-bold;text-decoration: none;background-color: #C2262E;text-transform: uppercase;float: left;text-align: center;border-radius: 10px;}
+.product_in_cart_total_price{font-size:17.2px;color:#000000;margin-bottom:0;line-height: 50px;}
+.product_in_cart_total_price span.product_in_cart_total_price_t{font-family:nexa-bold;}
+.product_in_cart_total_price span:hover{color: #000000 !important;}
+.product_in_cart_total_price span{color: #000000 !important;}
+.vc{font-size:17.2px !important;color:#000000 !important;margin-bottom:0;line-height: 50px;display:block;text-decoration:none;font-family:nexa-bold;text-transform:uppercase;}
+.vc:hover{color:#000000!important;}
+.nob{border-bottom:none;}
+.glyphicon-chevron-left_cart:before{content: "\e079";}
+.glyphicon-chevron-right_cart:before{content: "\e080";}
+@media (min-width: 992px) {
+    #cart_absolute_container{right:20px !important;left:auto!important;}
+    .item_in_cart_container{min-width:458px !important;}
+}
+@media (max-width: 992px) {
+    #cart_absolute_container{right:auto;left:0;}
+    .item_in_cart_container{min-width:auto;}
+}
+@media (max-width: 440px) {
+    .item_in_cart_container{min-width:250px;}
+	.product_in_cart_price {font-size: 8.7px;}
+}
+/* END CART SUB MENU CSS:
+====================*/
+
+/* INPUT CSS:
+====================*/
+.general_input input{text-transform:capitalize;font-size: 16.3px;color: #231F20;border:none;border-bottom:1px solid #5B5355;box-shadow: inset 0 1px 1px rgba(0,0,0,0);background-color: white;-moz-border-radius: 0px;-webkit-border-radius: 0px; border-radius: 0px;outline: none;}
+.general_input select{text-transform:capitalize;font-size: 16.3px;color: #231F20;border:none;border-bottom:1px solid #5B5355;box-shadow: inset 0 1px 1px rgba(0,0,0,0);background-color: white;-moz-border-radius: 0px;-webkit-border-radius: 0px; border-radius: 0px;outline: none;-webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;}
+.general_input textarea{resize: none;border:1px solid #5B5355; border-radius:0px;height:170px;}
+.general_input textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input textarea::-moz-placeholder { /* Firefox 19+ */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input textarea:-ms-input-placeholder { /* IE 10+ */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input textarea:-moz-placeholder { /* Firefox 18- */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input input::-moz-placeholder { /* Firefox 19+ */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input input:-ms-input-placeholder { /* IE 10+ */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.general_input input:-moz-placeholder { /* Firefox 18- */
+    color: #231F20;
+    font-size: 16.3px;
+    opacity: 1 !important;
+}
+.specialpad .general_input {padding-right:60px;}
+@media (max-width: 767px) {
+	.specialpad .general_input {padding-right:0px;}
+}
+
+/* END INPUT CSS:
+====================*/
+
+/* CHECKBOXES CSS:
+====================*/
+/*colored checkboxes css*/
+.checkbox_container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float:left;
+    margin-right: 11px;
+    margin-top: 10px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #FFFFFF;
+    border-radius:5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+    opacity:0.5;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkmark.red_checkmark{background-color:#ED1C24;}
+.checkmark.black_checkmark{background-color:#000000;}
+.checkmark.blue_checkmark{background-color:#00A4BD;}
+.checkmark.green_checkmark{background-color:#21B24B;}
+.checkmark.yellow_checkmark{background-color:#FFF200;}
+.checkmark.purple_checkmark{background-color:#A456A1;}
+.checkmark.pink_checkmark{background-color:#EF5D9C;}
+.checkmark.white_checkmark{background-color:#FFFFFF;border:2px solid #231F20;}
+.checkbox_container .checkmark.white_checkmark:after {border: solid black;border-width: 0 3px 3px 0;left: 8px;top: 1px;}
+.checkmark.grey_border_checkmark{background-color:#FFFFFF;border:2px solid #5B5355;}
+.checkbox_container .checkmark.grey_border_checkmark:after {border: solid black;border-width: 0 3px 3px 0;left: 8px;top: 1px;}
+.load_more_colors{color:#C2262E;font-family:nexa-italic;font-size:8px;text-transform:uppercase;margin-top:10px;display:block;margin-bottom:10px;}
+.load_more_colors:hover{color:#C2262E;text-decoration:none;}
+
+.checkbox_container:hover input:checked ~ .checkmark {
+    opacity:1;
+}
+
+/* CHROME SPECIAL CSS */
+.chrome .checkbox_container .checkmark.smal_white_checkmark:after {width: 10px;height: 11px;}
+.chrome .checkmark.smal_white_checkmark {width: 22px;}
+.chrome select.shipping_select{margin-left: 0px;}
+
+.bold_label{font-size:22px;color:#000000;font-family:nexa-bold;font-weight:normal;padding-left:30px;margin-bottom: 5px;}
+.checkmark.smal_white_checkmark{background-color:#FFFFFF;border:3px solid #231F20;}
+.checkmark.smal_white_checkmark.smal_white_checkmark{border:3px solid #231F20;}
+.checkbox_container .checkmark.smal_white_checkmark:after {background-color:#C2262E;border-width: 0;left: 3px;top: 2px;width: 11px;height: 12px;border-radius:2px;
+                                                           border: none;
+                                                           -webkit-transform: rotate(0deg);
+                                                           -ms-transform: rotate(0deg);
+                                                           transform: rotate(0deg);}
+.checkmark.smal_white_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: #FFFFFF;
+    border-radius:5px;
+    margin-top: 4px;
+}
+.checkmark.smal_red_checkmark{background-color:#FFFFFF;border:2px solid #C2262E;height: 21px;width: 21px;}
+.checkbox_container .checkmark.smal_red_checkmark:after {border: solid black;border-width: 0 3px 3px 0;left: 6px;top: 1px;}
+.services_label{font-size:16.3px;color:#C2262E;font-family:nexa-bold;text-transform:uppercase;font-weight:normal;padding-left:30px;margin-bottom: 5px;}
+
+/* END CHECKBOXES CSS:
+====================*/
+.fotter_circle_img{position:absolute;bottom: -48px;right: 35px;}
+.chout_title{font-size:50px;color:black;margin-bottom:30px;}
+.center_text{text-align:center;}
+.margin_top_80{margin-top:80px;}
+.margin_bottom_0{margin-bottom:0;}
+.margin_top_20{margin-top:20px;}
+.margin_top_30{margin-top:30px;}
+.margin_top_40{margin-top:40px;}
