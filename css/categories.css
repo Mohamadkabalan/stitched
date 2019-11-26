@@ -15,6 +15,10 @@
 .cat_under_img_text{text-align:center;font-size:20px;line-height:1;color:#000000;margin-top:10px;}
 .margin_bottom_15{margin-bottom:15px;}
 
+@media (max-width: 500px){
+	.xsx{width:50%;}
+}
+
 /* SORT BY FILTER */
 .sortby_select_container{float:right;min-width:250px;margin-bottom:15px;}
 /*the container must be positioned relative:*/
