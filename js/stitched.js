@@ -52,13 +52,23 @@ $(document).ready(function () {
                     $tabid.toggle();
                 });
             }
+
             clickmenu();
         }
     }
     checkWidth();
     $(window).resize(checkWidth);
-	
-	var swiper = new Swiper('.swiper-container', {
+    $(window).bind('resize', function (e)
+    {
+        if (window.RT)
+            clearTimeout(window.RT);
+        window.RT = setTimeout(function ()
+        {
+            this.location.reload(false);
+        }, 200);
+    });
+
+    var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 0,
         slidesPerGroup: 1,
