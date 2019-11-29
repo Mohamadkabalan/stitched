@@ -559,6 +559,16 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/swiper.js"></script>
-        <script type="text/javascript" src="js/stitched.js"></script>
+<script>
+if (screen && screen.width > 768) {
+document.write('<script type="text/javascript" src="js/stitched.js"><\/script>');
+}
+</script>
+		<script>
+if (screen.width <= 767) {
+document.write('<script type="text/javascript" src="js/stitched_mobile.js"><\/script>');
+}
+</script>
+
     </body>
 </html>

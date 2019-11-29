@@ -1,15 +1,5 @@
 
 $(document).ready(function () {
-    $(".scnd_menu_list li a").mouseover(function (event) {
-        event.preventDefault();
-        $(".scnd_menu_list li a").removeClass('active');
-        $(this).addClass('active');
-        var $id = $(this).attr('id');
-        var $sub = $('#sub_' + $id);
-        $('.contentmenu').hide();
-        $('.black_absolute_menu').show();
-        $sub.show();
-    });
 
     $(document).on('click', '.cart_close_but', function () {
         $("#cart_absolute_container").hide();
@@ -25,21 +15,13 @@ $(document).ready(function () {
         return $.trim(this.innerHTML) == ""
     }).remove();
 
-    var count = 0;
-    $('.scnd_menu_list li, .black_absolute_menu').mouseenter(function () {
-        count++;
-    }).mouseleave(function () {
-        count--;
-
-        setTimeout(function () {
-            if (count == 0) {
-                $('.contentmenu').hide();
-                $('.black_absolute_menu').hide();
-                $(".scnd_menu_list li a").removeClass('active');
-            }
-        }, 50);
-    });
-
+   $(".scnd_menu_list li a").click(function (event) {
+                    event.preventDefault();
+                    var $thisid = $(this).attr('id');
+                    var $tabid = $('#cont_' + $thisid);
+                    $tabid.toggle();
+                });
+				
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 0,
